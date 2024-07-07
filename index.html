@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" style="background-image: url('mocking-spongebob.jpg'); background-size: cover;">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Bobify</title>
+    <script>
+        function bobify() {
+            let userText = document.getElementById("user-in").value;
+            let newChars = [];
+            let count = 0;
+            for (let i = 0; i < userText.length; i++) {
+                if (userText[i] == " ") {
+                    newChars.push(userText[i]);
+                } else if (count % 2 == 0) {
+                    newChars.push(userText[i]);
+                    count++;
+                } else {
+                    newChars.push(userText[i].toUpperCase());
+                    count++;
+                }
+            }
+            document.getElementById("user-in").value = newChars.join("");
+        }
+    </script>
+</head>
+<body>
+    <div id="content-box">
+        <p class="chelsea">Enter text to Bobify:</p>
+        <input class="chelsea" id="user-in">
+        <button class="chelsea" id="bob-button" onclick="bobify()">BOBIFY</button>
+    </div>
+    <script>
+        var input = document.getElementById("user-in");
+        input.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("bob-button").click();
+            }
+        });
+    </script>
+</body>
+</html>

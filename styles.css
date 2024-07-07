@@ -1,0 +1,54 @@
+.chelsea {
+    font-family: "Chelsea Market", system-ui;
+    font-weight: 900;
+    font-style: normal;
+}
+
+p {
+    font-size: 80px;
+    color: rgb(121, 9, 111);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+body {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+#content-box {
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#user-in {
+    width: 400px;
+    height: 20px;
+    border-radius: 20px;
+    border:1px solid rgb(52, 172, 228);
+    outline: none;
+    padding: 10px;
+    font-size: 1rem;
+    box-shadow: none;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#bob-button {
+    margin-top: 20px;
+    width: 100px;
+    height: 50px;
+    color: rgb(121, 9, 111);
+    font-size: 20px;
+    background-color: yellow;
+    border-radius: 20px;
+    border: none;
+}
+
+#bob-button:hover {
+    background-color: rgb(217, 255, 0);
+}
